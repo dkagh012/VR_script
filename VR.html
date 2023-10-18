@@ -41,20 +41,6 @@
 
     <script src="./js/three.min.js"></script>
     <script src="./js/panolens.min.js"></script>
-    <script>
-      let panorama, panorama2, viewer;
-
-      const path = "asset/textures/cube/sand/";
-      const format = ".png";
-      panorama = new PANOLENS.CubePanorama("./images/4.jpg");
-
-      panorama2 = new PANOLENS.ImagePanorama("./images/1.jpg");
-
-      panorama.link(panorama2, new THREE.Vector3(-807.5, 604.88, -5000.0));
-      panorama2.link(panorama, new THREE.Vector3(-807.5, 604.88, -5000.0));
-
-      viewer = new PANOLENS.Viewer();
-      viewer.add(panorama, panorama2);
-    </script>
+    <script src="./js/main.js"></script>
   </body>
 </html>
