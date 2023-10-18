@@ -48,6 +48,7 @@ FourItem.addEventListener("click", function () {
   // OneItem을 클릭했을 때 panorama2로 이동
   viewer.setPanorama(panorama_Four);
 });
+
 viewer = new PANOLENS.Viewer({
   output: "console",
   container: document.querySelector("#Image"),
@@ -60,3 +61,31 @@ viewer.add(
   panorama_Three,
   panorama_Four
 );
+document.addEventListener("keydown", function (event) {
+  switch (event.key) {
+    case "ArrowUp":
+      // 방향키 위로 눌렀을 때 현재 이미지와 연결된 이미지로 이동
+      if (viewer.getPanorama()) {
+        let currentPanorama = viewer.getPanorama();
+        let linkedPanorama = currentPanorama.getLinkByCameraDirection();
+        if (linkedPanorama) {
+          viewer.setPanorama(linkedPanorama);
+        }
+      }
+      break;
+    case "ArrowDown":
+      // 방향키 아래로 눌렀을 때 현재 이미지의 반대 방향에 연결된 이미지로 이동
+      if (viewer.getPanorama()) {
+        let currentPanorama = viewer.getPanorama();
+        let cameraDirection = new THREE.Vector3();
+        viewer.getCamera().getWorldDirection(cameraDirection);
+        let linkedPanorama = currentPanorama.getLinkByCameraDirection(
+          cameraDirection.negate()
+        );
+        if (linkedPanorama) {
+          viewer.setPanorama(linkedPanorama);
+        }
+      }
+      break;
+  }
+});
