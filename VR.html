@@ -6,41 +6,49 @@
       name="viewport"
       content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width, shrink-to-fit=no"
     />
-    <title>Panolens.js panorama image panorama</title>
-    <style>
-      html,
-      body {
-        margin: 0;
-        width: 100%;
-        height: 100%;
-        overflow: hidden;
-        background-color: #000;
-      }
-
-      a:link,
-      a:visited {
-        color: #bdc3c7;
-      }
-
-      .credit {
-        position: absolute;
-        text-align: center;
-        width: 100%;
-        padding: 20px 0;
-        color: #fff;
-      }
-    </style>
+    <title>vr테스트</title>
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/xeicon.css" />
+    <link rel="stylesheet" href="./css/xeicon.min.css" />
   </head>
 
   <body>
-    <div class="credit">
-      <a href="https://github.com/pchen66/panolens.js">Panolens.js</a> panorama
-      cube example. Image from
-      <a href="http://paulbourke.net/miscellaneous/">Paul Bourke</a>
+    <div class="container">
+      <div class="openMenu">
+        <button class="open" type="button">
+          <i class="xi-bars"></i>
+        </button>
+      </div>
+      <div class="left SideMenu">
+        <ul class="SideMenuList">
+          <li class="MenuItem Clicked">
+            <button type="button">
+              <span>입구</span><i class="xi-angle-down-min"></i>
+            </button>
+          </li>
+          <li class="MenuItem">
+            <button type="button">
+              <span>1전시관</span><i class="xi-angle-down-min"></i>
+            </button>
+          </li>
+          <li class="MenuItem">
+            <button type="button">
+              <span>2전시관</span><i class="xi-angle-down-min"></i>
+            </button>
+          </li>
+          <li class="MenuItem">
+            <button type="button">
+              <span>수석실</span><i class="xi-angle-down-min"></i>
+            </button>
+          </li>
+        </ul>
+      </div>
+      <div class="right" id="Image"></div>
     </div>
-
-    <script src="./js/three.min.js"></script>
-    <script src="./js/panolens.min.js"></script>
-    <script src="./js/main.js"></script>
   </body>
+  <script src="./js/three.min.js"></script>
+  <script src="./js/panolens.min.js"></script>
+  <script src="./js/main.js"></script>
+  <script src="./js/Menu.js"></script>
 </html>
