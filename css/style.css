@@ -52,6 +52,12 @@ body {
 .SideMenu .SideMenuList {
   padding-top: 90px;
 }
+.ChangeBtn {
+  background: white;
+}
+.ChangeBtn * {
+  color: black;
+}
 .SideMenu .SideMenuList .MenuItem button:hover {
   background: #00876c;
   box-shadow: 5px 8px 10px rgba(0, 14, 64, 0.12);
