@@ -77,14 +77,15 @@ viewer.add(
 );
 
 document.addEventListener("keydown", function (event) {
-  if (event.key === "ArrowUp" && isDirectionInCenter(infospot1.position)) {
-    // viewer.setPanorama(panorama2);
+  if (event.key === "ArrowUp" && isDirectionInCenter(panorama2.position)) {
+    viewer.setPanorama(panorama2);
   }
 });
 
 function isDirectionInCenter(targetPosition) {
   var cameraDirection = new THREE.Vector3();
   viewer.getCamera().getWorldDirection(cameraDirection);
+  console.log(viewer.getCamera());
 
   var targetDirection = new THREE.Vector3();
   targetDirection
@@ -92,6 +93,5 @@ function isDirectionInCenter(targetPosition) {
     .normalize();
   // console.log(targetDirection);
   var dot = cameraDirection.dot(targetDirection);
-  console.log(cameraDirection);
   return dot > 0.97;
 }

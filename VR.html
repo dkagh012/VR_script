@@ -49,6 +49,39 @@
   </body>
   <script src="./js/three.min.js"></script>
   <script src="./js/panolens.min.js"></script>
+
   <script src="./js/main.js"></script>
   <script src="./js/Menu.js"></script>
 </html>
+<!-- link: function (a, b, c, e) {
+  console.log(a);
+  console.log(b);
+  console.log(c);
+  console.log(e);
+  this.visible = !0;
+  b
+    ? ((c =
+        void 0 !== c
+          ? c
+          : void 0 !== a.linkingImageScale
+          ? a.linkingImageScale
+          : 300),
+      (e = e ? e : a.linkingImageURL ? a.linkingImageURL : t.Arrow),
+      (e = new y(c, e)),
+      e.position.copy(b),
+      (e.toPanorama = a),
+      e.addEventListener(
+        "click",
+        function () {
+          this.dispatchEvent({
+            type: "panolens-viewer-handler",
+            method: "setPanorama",
+            data: a,
+          });
+        }.bind(this)
+      ),
+      this.linkedSpots.push(e),
+      this.add(e),
+      (this.visible = !1))
+    : console.warn("Please specify infospot position for linking");
+}, -->
