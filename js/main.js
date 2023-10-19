@@ -23,6 +23,28 @@ VR_Screen(panorama_Two, 5000.0, 266.32, -84.5);
 VR_Screen(panorama_Three, -5000.0, 26.47, -247.3);
 VR_Screen(panorama_Four, 5000.0, 266.32, -84.5);
 
+OneItem.addEventListener("click", function () {
+  // OneItem을 클릭했을 때 panorama2로 이동
+  viewer.setPanorama(panorama1);
+});
+TwoItem.addEventListener("click", function () {
+  // OneItem을 클릭했을 때 panorama2로 이동
+  viewer.setPanorama(panorama7);
+});
+ThreeItem.addEventListener("click", function () {
+  // OneItem을 클릭했을 때 panorama2로 이동
+  viewer.setPanorama(panorama_Three);
+});
+FourItem.addEventListener("click", function () {
+  // OneItem을 클릭했을 때 panorama2로 이동
+  viewer.setPanorama(panorama_Four);
+});
+
+viewer = new PANOLENS.Viewer({
+  output: "console",
+  container: document.querySelector("#Image"),
+});
+
 let panorama1 = createImagePanorama("./images/1.jpg");
 let panorama2 = createImagePanorama("./images/2.jpg");
 let panorama3 = createImagePanorama("./images/3.jpg");
@@ -88,14 +110,7 @@ let panorama62 = createImagePanorama("./images/62.jpg");
 let panorama63 = createImagePanorama("./images/63.jpg");
 let panorama64 = createImagePanorama("./images/64.jpg");
 let panorama65 = createImagePanorama("./images/65.jpg");
-// const panoramas = {};
 
-// for (let i = 1; i <= 65; i++) {
-//   const imagePath = `./images/${i}.jpg`;
-//   panoramas[`panorama${i}`] = createImagePanorama(imagePath);
-// }
-
-// console.log(panorama1);
 VR_Screen(panorama1, -5000.0, 171.4, 1359.04);
 VR_Screen(panorama2, -5000.0, -21.57, -628.63);
 VR_Screen(panorama3, -90.99, 501.3, -5000.0);
@@ -109,7 +124,6 @@ VR_Screen(panorama10, 5000.0, 105.86, 17.6);
 VR_Screen(panorama11, 5000.0, 460.48, 32.99);
 VR_Screen(panorama12, 432.18, 185.26, 5000.0);
 VR_Screen(panorama13, 432.18, 185.26, 5000.0);
-// 여기
 VR_Screen(panorama14, 2008.27, -48.68, 5000.0);
 VR_Screen(panorama15, 5000.0, 154.8, 22.93);
 VR_Screen(panorama16, 5000.0, 275.83, 155.99);
@@ -118,6 +132,50 @@ VR_Screen(panorama18, 5000.0, -266.85, -190.33);
 VR_Screen(panorama19, 5000.0, 132.84, 299.7);
 VR_Screen(panorama20, 5000.0, 48.78, -1075.08);
 VR_Screen(panorama21, -1816.26, -441.72, -5000.0);
+VR_Screen(panorama22, 432.18, 185.26, 5000.0);
+VR_Screen(panorama23, 432.18, 185.26, 5000.0);
+VR_Screen(panorama24, 2008.27, -48.68, 5000.0);
+VR_Screen(panorama25, 5000.0, 154.8, 22.93);
+VR_Screen(panorama26, 5000.0, 275.83, 155.99);
+VR_Screen(panorama27, 5000.0, 149.56, -272.84);
+VR_Screen(panorama28, 5000.0, -266.85, -190.33);
+VR_Screen(panorama29, 5000.0, 132.84, 299.7);
+VR_Screen(panorama30, 5000.0, 132.84, 299.7);
+VR_Screen(panorama31, -1816.26, -441.72, -5000.0);
+VR_Screen(panorama32, 432.18, 185.26, 5000.0);
+VR_Screen(panorama33, 432.18, 185.26, 5000.0);
+VR_Screen(panorama34, 2008.27, -48.68, 5000.0);
+VR_Screen(panorama35, 5000.0, 154.8, 22.93);
+VR_Screen(panorama36, 5000.0, 275.83, 155.99);
+VR_Screen(panorama37, 5000.0, 149.56, -272.84);
+VR_Screen(panorama38, 5000.0, -266.85, -190.33);
+VR_Screen(panorama39, 5000.0, 132.84, 299.7);
+VR_Screen(panorama40, 5000.0, 132.84, 299.7);
+VR_Screen(panorama41, -1816.26, -441.72, -5000.0);
+VR_Screen(panorama42, 432.18, 185.26, 5000.0);
+VR_Screen(panorama43, 432.18, 185.26, 5000.0);
+VR_Screen(panorama44, 2008.27, -48.68, 5000.0);
+VR_Screen(panorama45, 5000.0, 154.8, 22.93);
+VR_Screen(panorama46, 5000.0, 275.83, 155.99);
+VR_Screen(panorama47, 5000.0, 149.56, -272.84);
+VR_Screen(panorama48, 5000.0, -266.85, -190.33);
+VR_Screen(panorama49, 5000.0, 132.84, 299.7);
+VR_Screen(panorama50, 5000.0, 132.84, 299.7);
+VR_Screen(panorama51, -1816.26, -441.72, -5000.0);
+VR_Screen(panorama52, 432.18, 185.26, 5000.0);
+VR_Screen(panorama53, 432.18, 185.26, 5000.0);
+VR_Screen(panorama54, 2008.27, -48.68, 5000.0);
+VR_Screen(panorama55, 5000.0, 154.8, 22.93);
+VR_Screen(panorama56, 5000.0, 275.83, 155.99);
+VR_Screen(panorama57, 5000.0, 149.56, -272.84);
+VR_Screen(panorama58, 5000.0, -266.85, -190.33);
+VR_Screen(panorama59, 5000.0, 132.84, 299.7);
+VR_Screen(panorama60, 5000.0, 132.84, 299.7);
+VR_Screen(panorama61, -1816.26, -441.72, -5000.0);
+VR_Screen(panorama62, 432.18, 185.26, 5000.0);
+VR_Screen(panorama63, 432.18, 185.26, 5000.0);
+VR_Screen(panorama64, 2008.27, -48.68, 5000.0);
+VR_Screen(panorama65, 5000.0, 154.8, 22.93);
 
 panorama1.link(panorama2, new THREE.Vector3(-5000.0, 45.33, -428.24));
 panorama2.link(panorama3, new THREE.Vector3(-5000.0, -194.85, -597.87));
@@ -135,59 +193,125 @@ panorama13.link(panorama14, new THREE.Vector3(363.99, -37.48, 5000.0));
 panorama14.link(panorama15, new THREE.Vector3(1793.92, -38.0, 5000.0));
 panorama15.link(panorama16, new THREE.Vector3(5000.0, 154.8, 22.93));
 panorama16.link(panorama17, new THREE.Vector3(5000.0, -182.81, -280.65));
-// 여기
 panorama17.link(panorama18, new THREE.Vector3(5000.0, -271.15, 2303.48));
 panorama18.link(panorama19, new THREE.Vector3(5000.0, -266.85, -190.33));
 panorama19.link(panorama20, new THREE.Vector3(5000.0, -273.47, 1517.24));
 panorama20.link(panorama21, new THREE.Vector3(5000.0, -29.45, 295.07));
+panorama21.link(panorama22, new THREE.Vector3(5000.0, -612.71, -54.24));
+panorama22.link(panorama23, new THREE.Vector3(363.99, -37.48, 5000.0));
+panorama23.link(panorama24, new THREE.Vector3(363.99, -37.48, 5000.0));
+panorama24.link(panorama25, new THREE.Vector3(1793.92, -38.0, 5000.0));
+panorama25.link(panorama26, new THREE.Vector3(5000.0, 154.8, 22.93));
+panorama26.link(panorama27, new THREE.Vector3(5000.0, -182.81, -280.65));
+panorama27.link(panorama28, new THREE.Vector3(5000.0, -271.15, 2303.48));
+panorama28.link(panorama29, new THREE.Vector3(5000.0, -266.85, -190.33));
+panorama29.link(panorama30, new THREE.Vector3(5000.0, -273.47, 1517.24));
+panorama30.link(panorama31, new THREE.Vector3(5000.0, -29.45, 295.07));
+panorama31.link(panorama32, new THREE.Vector3(5000.0, -612.71, -54.24));
+panorama32.link(panorama33, new THREE.Vector3(363.99, -37.48, 5000.0));
+panorama33.link(panorama34, new THREE.Vector3(363.99, -37.48, 5000.0));
+panorama34.link(panorama35, new THREE.Vector3(1793.92, -38.0, 5000.0));
+panorama35.link(panorama36, new THREE.Vector3(5000.0, 154.8, 22.93));
+panorama36.link(panorama37, new THREE.Vector3(5000.0, -182.81, -280.65));
+panorama37.link(panorama38, new THREE.Vector3(5000.0, -271.15, 2303.48));
+panorama38.link(panorama39, new THREE.Vector3(5000.0, -266.85, -190.33));
+panorama39.link(panorama40, new THREE.Vector3(5000.0, -273.47, 1517.24));
+panorama40.link(panorama41, new THREE.Vector3(5000.0, -29.45, 295.07));
+panorama41.link(panorama42, new THREE.Vector3(5000.0, -612.71, -54.24));
+panorama42.link(panorama43, new THREE.Vector3(363.99, -37.48, 5000.0));
+panorama43.link(panorama44, new THREE.Vector3(363.99, -37.48, 5000.0));
+panorama44.link(panorama45, new THREE.Vector3(1793.92, -38.0, 5000.0));
+panorama45.link(panorama46, new THREE.Vector3(5000.0, 154.8, 22.93));
+panorama46.link(panorama47, new THREE.Vector3(5000.0, -182.81, -280.65));
+panorama47.link(panorama48, new THREE.Vector3(5000.0, -271.15, 2303.48));
+panorama48.link(panorama49, new THREE.Vector3(5000.0, -266.85, -190.33));
+panorama49.link(panorama50, new THREE.Vector3(5000.0, -273.47, 1517.24));
+panorama50.link(panorama51, new THREE.Vector3(5000.0, -29.45, 295.07));
+panorama51.link(panorama52, new THREE.Vector3(5000.0, -612.71, -54.24));
+panorama52.link(panorama53, new THREE.Vector3(363.99, -37.48, 5000.0));
+panorama53.link(panorama54, new THREE.Vector3(363.99, -37.48, 5000.0));
+panorama54.link(panorama55, new THREE.Vector3(1793.92, -38.0, 5000.0));
+panorama55.link(panorama56, new THREE.Vector3(5000.0, 154.8, 22.93));
+panorama56.link(panorama57, new THREE.Vector3(5000.0, -182.81, -280.65));
+panorama57.link(panorama58, new THREE.Vector3(5000.0, -271.15, 2303.48));
+panorama58.link(panorama59, new THREE.Vector3(5000.0, -266.85, -190.33));
+panorama59.link(panorama60, new THREE.Vector3(5000.0, -273.47, 1517.24));
+panorama60.link(panorama61, new THREE.Vector3(5000.0, -29.45, 295.07));
+panorama61.link(panorama62, new THREE.Vector3(5000.0, -612.71, -54.24));
+panorama62.link(panorama63, new THREE.Vector3(363.99, -37.48, 5000.0));
+panorama63.link(panorama64, new THREE.Vector3(363.99, -37.48, 5000.0));
+panorama64.link(panorama65, new THREE.Vector3(1793.92, -38.0, 5000.0));
 // panorama11.link(panorama12, new THREE.Vector3(-5000.0, -21.57, -628.63));
 
-OneItem.addEventListener("click", function () {
-  // OneItem을 클릭했을 때 panorama2로 이동
-  viewer.setPanorama(panorama1);
-});
-TwoItem.addEventListener("click", function () {
-  // OneItem을 클릭했을 때 panorama2로 이동
-  viewer.setPanorama(panorama7);
-});
-ThreeItem.addEventListener("click", function () {
-  // OneItem을 클릭했을 때 panorama2로 이동
-  viewer.setPanorama(panorama_Three);
-});
-FourItem.addEventListener("click", function () {
-  // OneItem을 클릭했을 때 panorama2로 이동
-  viewer.setPanorama(panorama_Four);
-});
-
-viewer = new PANOLENS.Viewer({
-  output: "console",
-  container: document.querySelector("#Image"),
-});
 viewer.add(
-  // panorama1,
-  // panorama2,
-  // panorama3,
-  // panorama4,
-  // panorama5,
-  // panorama6,
-  // panorama7,
-  // panorama8,
-  // panorama9,
-  // panorama10,
   // panorama_Two,
   // panorama_Three,
   // panorama_Four,
-  // panorama11,
-  // panorama12,
-  // panorama13,
-  // panorama14,
-  // panorama15,
-  // panorama16,
-  // panorama17,
-  // panorama18,
-  // panorama19,
-  // panorama20,
-  panorama21
+  panorama1,
+  panorama2,
+  panorama3,
+  panorama4,
+  panorama5,
+  panorama6,
+  panorama7,
+  panorama8,
+  panorama9,
+  panorama10,
+  panorama11,
+  panorama12,
+  panorama13,
+  panorama14,
+  panorama15,
+  panorama16,
+  panorama17,
+  panorama18,
+  panorama19,
+  panorama20,
+  panorama21,
+  panorama22,
+  panorama23,
+  panorama24,
+  panorama25,
+  panorama26,
+  panorama27,
+  panorama28,
+  panorama29,
+  panorama30,
+  panorama31,
+  panorama32,
+  panorama33,
+  panorama34,
+  panorama35,
+  panorama36,
+  panorama37,
+  panorama38,
+  panorama39,
+  panorama40,
+  panorama41,
+  panorama42,
+  panorama43,
+  panorama44,
+  panorama45,
+  panorama46,
+  panorama47,
+  panorama48,
+  panorama49,
+  panorama50,
+  panorama51,
+  panorama52,
+  panorama53,
+  panorama54,
+  panorama55,
+  panorama56,
+  panorama57,
+  panorama58,
+  panorama59,
+  panorama60,
+  panorama61,
+  panorama62,
+  panorama63,
+  panorama64,
+  panorama65
 );
 
 // 위치 먼저
