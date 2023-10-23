@@ -85,7 +85,6 @@ function VR_turn(element, TurnElement, link, x, y, z) {
   element.addEventListener("panolens-viewer-handler", function (event) {
     const currentPanoramaImage = event.data.src;
     console.log(currentPanoramaImage);
-    console.log(currentPanoramaImage === link);
     if (currentPanoramaImage === link) {
       VR_Screen(TurnElement, x, y, z);
     } else {
@@ -221,7 +220,7 @@ VR_Screen(panorama25, -5000.0, 296.9, -838.21);
 VR_Screen(panorama26, -4889.6, 636.43, -5000.0);
 VR_Screen(panorama27, -5000.0, 100.27, -2809.68);
 VR_Screen(panorama28, -5000.0, 59.69, -1380.79);
-VR_Screen(panorama29, -1606.7, -32.38, -5000.0);
+VR_Screen(panorama29, 5000.0, -20.13, -1599.67);
 VR_Screen(panorama30, 5000.0, -171.62, -1617.99);
 VR_Screen(panorama31, 919.28, -257.14, -5000.0);
 VR_Screen(panorama32, -5000.0, 274.13, -2542.07);
@@ -263,10 +262,37 @@ VR_Screen(panorama65, 5000.0, 274.43, 4434.38);
 
 // 턴 이벤트
 
+// 2전시에서 1전시
+VR_turn(panorama31, panorama23, "./images/23.jpg", -5000.0, -57.31, -1161.86);
+VR_turn(panorama23, panorama31, "./images/31.jpg", 4128.1, 333.48, -5000.0);
+VR_turn(panorama23, panorama24, "./images/24.jpg", -368.65, 421.37, -5000.0);
+VR_turn(panorama24, panorama23, "./images/23.jpg", 102.08, -425.41, 5000.0);
+VR_turn(panorama24, panorama25, "./images/25.jpg", -5000.0, 296.9, -838.21);
+VR_turn(panorama25, panorama24, "./images/24.jpg", -564.9, -536.42, 5000.0);
+VR_turn(panorama26, panorama25, "./images/25.jpg", 130.48, 347.86, 5000.0);
+VR_turn(panorama26, panorama27, "./images/27.jpg", -5000.0, 100.27, -2809.68);
+VR_turn(panorama27, panorama26, "./images/26.jpg", -4889.6, 636.43, -5000.0);
+VR_turn(panorama28, panorama27, "./images/27.jpg", 5000.0, -618.02, -329.99);
+VR_turn(panorama27, panorama28, "./images/28.jpg", -5000.0, 59.69, -1380.79);
+VR_turn(panorama29, panorama28, "./images/28.jpg", 5000.0, -191.69, -570.98);
+VR_turn(panorama28, panorama29, "./images/29.jpg", 5000.0, -20.13, -1599.67);
+VR_turn(panorama14, panorama13, "./images/13.jpg", -58.02, 71.09, -5000.0);
+VR_turn(panorama12, panorama13, "./images/13.jpg", 432.18, 185.26, 5000.0);
+VR_turn(panorama13, panorama14, "./images/14.jpg", 2008.27, -48.68, 5000.0);
+VR_turn(panorama15, panorama14, "./images/14.jpg", -58.02, 71.09, -5000.0);
+VR_turn(panorama14, panorama15, "./images/15.jpg", 5000.0, 154.8, 22.93);
+VR_turn(panorama16, panorama15, "./images/15.jpg", -5000.0, 156.73, -3970.31);
+VR_turn(panorama15, panorama16, "./images/16.jpg", 5000.0, 275.83, 155.99);
+VR_turn(panorama17, panorama16, "./images/16.jpg", -5000.0, 204.92, 824.28);
+VR_turn(panorama18, panorama17, "./images/17.jpg", -4994.32, 234.13, 844.78);
+VR_turn(panorama19, panorama17, "./images/17.jpg", -4994.32, 234.13, 844.78);
+VR_turn(panorama16, panorama17, "./images/17.jpg", 5000.0, 149.56, -272.84);
 //수석실에서 2전시관 가는길
 VR_turn(panorama41, panorama40, "./images/40.jpg", -10.31, 143.41, 5000.0);
 VR_turn(panorama40, panorama39, "./images/39.jpg", -5000.0, 348.65, -2692.99);
+VR_turn(panorama39, panorama40, "./images/40.jpg", -343.78, 333.95, -5000.0);
 VR_turn(panorama39, panorama36, "./images/36.jpg", -5000.0, -496.87, 22.83);
+VR_turn(panorama36, panorama39, "./images/39.jpg", -1373.03, -237.79, 5000.0);
 VR_turn(panorama38, panorama37, "./images/37.jpg", -5000.0, -207.48, -3887.16);
 VR_turn(panorama36, panorama35, "./images/35.jpg", 50.99, -649.24, -5000.0);
 VR_turn(panorama35, panorama34, "./images/34.jpg", 762.2, -378.54, -5000.0);
@@ -274,23 +300,44 @@ VR_turn(panorama34, panorama33, "./images/33.jpg", 5000.0, 601.5, 808.0);
 VR_turn(panorama33, panorama32, "./images/32.jpg", 1184.97, 312.76, 5000.0);
 VR_turn(panorama32, panorama31, "./images/31.jpg", -286.93, 63.17, 5000.0);
 VR_turn(panorama34, panorama31, "./images/31.jpg", -286.93, 63.17, 5000.0);
+VR_turn(panorama31, panorama34, "./images/34.jpg", -18.14, 448.81, 5000.0);
+VR_turn(panorama35, panorama36, "./images/36.jpg", 582.29, 394.59, 5000.0);
 
 VR_turn(panorama34, panorama35, "./images/35.jpg", -18.14, 448.81, 5000.0);
 VR_turn(panorama33, panorama34, "./images/34.jpg", -212.82, 571.82, 5000.0);
 VR_turn(panorama32, panorama33, "./images/33.jpg", -3485.79, 324.96, 5000.0);
 VR_turn(panorama31, panorama32, "./images/32.jpg", -5000.0, -43.86, -2640.43);
 
+//  야외 전시관
+VR_turn(panorama50, panorama49, "./images/49.jpg", -5000.0, -81.61, -4157.21);
+VR_turn(panorama49, panorama50, "./images/50.jpg", 5000.0, 333.68, -657.5);
+VR_turn(panorama49, panorama48, "./images/48.jpg", -5000.0, 41.81, -1748.8);
+VR_turn(panorama48, panorama49, "./images/49.jpg", 5000.0, 333.68, -657.5);
+VR_turn(panorama48, panorama47, "./images/47.jpg", -5000.0, 129.72, 42.2);
+VR_turn(panorama47, panorama48, "./images/48.jpg", 5000.0, 333.68, -657.5);
+VR_turn(panorama47, panorama46, "./images/46.jpg", -5000.0, -16.95, 304.44);
+VR_turn(panorama46, panorama47, "./images/47.jpg", 5000.0, 243.06, -1423.19);
+VR_turn(panorama46, panorama45, "./images/45.jpg", 361.69, 24.93, 5000.0);
+VR_turn(panorama45, panorama46, "./images/46.jpg", 5000.0, 344.68, -602.68);
+VR_turn(panorama45, panorama44, "./images/44.jpg", -5000.0, 216.09, -514.49);
+VR_turn(panorama44, panorama45, "./images/45.jpg", 4998.9, 224.23, -62.23);
+
 // 수석실 들어가기전
-VR_turn(panorama50, panorama41, "./images/41.jpg", -5000.0, 168.76, 278.12);
+VR_turn(panorama50, panorama45, "./images/41.jpg", -5000.0, 168.76, 278.12);
+VR_turn(panorama51, panorama41, "./images/41.jpg", 5000.0, 313.25, -337.33);
+VR_turn(panorama42, panorama41, "./images/41.jpg", -5000.0, 165.85, 159.13);
+VR_turn(panorama42, panorama44, "./images/44.jpg", 5000.0, 162.96, 92.59);
+VR_turn(panorama44, panorama41, "./images/41.jpg", -5000.0, 269.83, 180.8);
 VR_turn(panorama53, panorama52, "./images/52.jpg", -5000.0, 373.6, -982.66);
 VR_turn(panorama52, panorama51, "./images/51.jpg", -5000.0, 192.54, 292.0);
+VR_turn(panorama41, panorama51, "./images/51.jpg", 5000.0, 313.25, -337.33);
 VR_turn(panorama41, panorama43, "./images/43.jpg", -5000.0, 331.08, -857.4);
-VR_turn(panorama42, panorama41, "./images/41.jpg", -5000.0, 165.85, 159.13);
 VR_turn(panorama42, panorama43, "./images/43.jpg", 2049.07, -96.58, 5000.0);
 VR_turn(panorama43, panorama42, "./images/42.jpg", -905.38, 173.99, -5000.0);
 VR_turn(panorama43, panorama41, "./images/41.jpg", 5000.0, 397.53, -512.14);
 VR_turn(panorama44, panorama42, "./images/42.jpg", 200.72, 286.54, 5000.0);
-VR_turn(panorama44, panorama41, "./images/41.jpg", -5000.0, 269.83, 180.8);
+VR_turn(panorama41, panorama42, "./images/42.jpg", 200.72, 286.54, 5000.0);
+VR_turn(panorama42, panorama40, "./images/40.jpg", -10.31, 143.41, 5000.0);
 
 // 수석실
 VR_turn(panorama1, panorama65, "./images/65.jpg", -3901.59, 89.63, -5000.0);
@@ -332,7 +379,7 @@ panorama12.link(panorama13, new THREE.Vector3(363.99, -37.48, 5000.0));
 panorama13.link(panorama14, new THREE.Vector3(363.99, -37.48, 5000.0));
 panorama14.link(panorama15, new THREE.Vector3(1793.92, -38.0, 5000.0));
 panorama15.link(panorama16, new THREE.Vector3(5000.0, 154.8, 22.93));
-panorama16.link(panorama17, new THREE.Vector3(5000.0, -182.81, -280.65));
+panorama16.link(panorama17, new THREE.Vector3(5000.0, -164.41, 83.03));
 panorama17.link(panorama18, new THREE.Vector3(5000.0, -271.15, 2303.48));
 panorama18.link(panorama19, new THREE.Vector3(5000.0, -266.85, -190.33));
 panorama19.link(panorama20, new THREE.Vector3(5000.0, -273.47, 1517.24));
@@ -342,11 +389,9 @@ panorama22.link(panorama23, new THREE.Vector3(-36.48, 185.13, -5000.0));
 panorama23.link(panorama24, new THREE.Vector3(1136.13, 366.26, -5000.0));
 panorama24.link(panorama25, new THREE.Vector3(-368.65, 421.37, -5000.0));
 panorama25.link(panorama26, new THREE.Vector3(-5000.0, -34.34, -1987.44));
-panorama26.link(panorama27, new THREE.Vector3(-5000.0, -223.9, -2994.32));
+panorama26.link(panorama27, new THREE.Vector3(-5000.0, 435.92, -4954.56));
 panorama27.link(panorama28, new THREE.Vector3(-5000.0, 57.98, -3763.33));
 panorama28.link(panorama29, new THREE.Vector3(-5000.0, -733.11, -1705.51));
-panorama29.link(panorama30, new THREE.Vector3(5000.0, -273.47, 1517.24));
-panorama30.link(panorama31, new THREE.Vector3(5000.0, -255.97, -1319.86));
 panorama31.link(panorama32, new THREE.Vector3(4128.1, 333.48, -5000.0));
 panorama32.link(panorama33, new THREE.Vector3(-5000.0, -270.98, -3646.05));
 panorama33.link(panorama34, new THREE.Vector3(-2863.28, 129.34, 5000.0));
@@ -409,6 +454,14 @@ panorama65.link(panorama64, new THREE.Vector3(-4131.89, 307.45, -5000.0));
 panorama1.link(panorama65, new THREE.Vector3(-5000.0, 9.04, 3505.69));
 panorama8.link(panorama61, new THREE.Vector3(3054.9, 122.91, -5000.0));
 
+//  야외 전시관
+panorama50.link(panorama49, new THREE.Vector3(1728.52, 181.38, -5000.0));
+panorama49.link(panorama48, new THREE.Vector3(-5000.0, -154.18, -4722.94));
+panorama48.link(panorama47, new THREE.Vector3(-5000.0, -68.95, -1866.94));
+panorama47.link(panorama46, new THREE.Vector3(-5000.0, -16.95, 304.44));
+panorama46.link(panorama45, new THREE.Vector3(-5000.0, -16.95, 304.44));
+panorama45.link(panorama44, new THREE.Vector3(285.02, 53.49, 5000.0));
+
 // 수석실 들어가기전
 panorama52.link(panorama51, new THREE.Vector3(-5000.0, 134.65, -1884.65));
 panorama51.link(panorama41, new THREE.Vector3(-5000.0, 192.54, 292.0));
@@ -440,6 +493,28 @@ panorama33.link(panorama32, new THREE.Vector3(5000.0, -52.58, 735.98));
 panorama32.link(panorama31, new THREE.Vector3(1153.04, -158.61, 5000.0));
 panorama31.link(panorama34, new THREE.Vector3(-5000.0, 60.96, -259.21));
 
+// 2전시에서 1전시
+panorama31.link(panorama23, new THREE.Vector3(-284.88, -317.68, 5000.0));
+panorama23.link(panorama31, new THREE.Vector3(5000.0, 114.13, -51.78));
+panorama24.link(panorama23, new THREE.Vector3(-179.52, -431.98, 5000.0));
+panorama25.link(panorama24, new THREE.Vector3(166.62, -436.62, 5000.0));
+panorama25.link(panorama12, new THREE.Vector3(-295.94, 49.68, -5000.0));
+panorama12.link(panorama25, new THREE.Vector3(5000.0, -19.75, 9.89));
+panorama26.link(panorama25, new THREE.Vector3(-5000.0, -14.85, -615.82));
+panorama26.link(panorama17, new THREE.Vector3(5000.0, 160.36, 158.63));
+panorama27.link(panorama26, new THREE.Vector3(5000.0, -828.38, -394.62));
+panorama28.link(panorama27, new THREE.Vector3(5000.0, -111.51, -1066.38));
+panorama29.link(panorama28, new THREE.Vector3(-139.77, 21.86, 5000.0));
+panorama13.link(panorama12, new THREE.Vector3(-58.02, 71.09, -5000.0));
+panorama14.link(panorama13, new THREE.Vector3(-58.02, 71.09, -5000.0));
+panorama15.link(panorama14, new THREE.Vector3(-5000.0, -100.98, -3991.38));
+panorama16.link(panorama15, new THREE.Vector3(-5000.0, -90.92, -113.71));
+panorama17.link(panorama16, new THREE.Vector3(-5000.0, 204.92, 824.28));
+panorama17.link(panorama26, new THREE.Vector3(304.69, 103.24, -5000.0));
+panorama17.link(panorama19, new THREE.Vector3(5000.0, -323.37, -290.93));
+panorama18.link(panorama17, new THREE.Vector3(-5000.0, 158.26, -4072.68));
+panorama19.link(panorama17, new THREE.Vector3(-5000.0, 224.49, 1325.45));
+
 viewer.add(
   // panorama_Two,
   // panorama_Three,
@@ -459,21 +534,21 @@ viewer.add(
   // panorama13,
   // panorama14,
   // panorama15,
-  // panorama16,
-  // panorama17,
-  // panorama18,
-  // panorama19,
-  // panorama20,
-  // panorama21,
-  // panorama22,
-  // panorama23,
-  // panorama24,
-  // panorama25,
-  // panorama26,
-  // panorama27,
-  // panorama28,
-  // panorama29,
-  // panorama30,
+  panorama16,
+  panorama17,
+  panorama18,
+  panorama19,
+  panorama20,
+  panorama21,
+  panorama22,
+  panorama23,
+  panorama24,
+  panorama25,
+  panorama26,
+  panorama27,
+  panorama28,
+  panorama29,
+  panorama30
   // panorama31,
   // panorama32,
   // panorama33,
@@ -525,56 +600,56 @@ viewer.add(
   // panorama53,
   // panorama52,
   // panorama51,
-  panorama41,
-  panorama50,
-  panorama49,
-  panorama48,
-  panorama47,
-  panorama46,
-  panorama45,
-  panorama44,
-  panorama43,
-  panorama42,
-  panorama40,
-  panorama39,
-  panorama38,
-  panorama37,
-  panorama36,
-  panorama35,
-  panorama34,
-  panorama33,
-  panorama32,
-  panorama31,
-  panorama30,
-  panorama29,
-  panorama28,
-  panorama27,
-  panorama26,
-  panorama25,
-  panorama24,
-  panorama23,
-  panorama22,
-  panorama21,
-  panorama20,
-  panorama19,
-  panorama18,
-  panorama17,
-  panorama16,
-  panorama15,
-  panorama14,
-  panorama13,
-  panorama12,
-  panorama11,
-  panorama10,
-  panorama9,
-  panorama8,
-  panorama7,
-  panorama6,
-  panorama5,
-  panorama4,
-  panorama3,
-  panorama2,
-  panorama1
+  // panorama50,
+  // panorama49,
+  // panorama48,
+  // panorama47,
+  // panorama46,
+  // panorama45,
+  // panorama44,
+  // panorama43,
+  // panorama42,
+  // panorama41,
+  // panorama40,
+  // panorama39,
+  // panorama38,
+  // panorama37,
+  // panorama36,
+  // panorama35,
+  // panorama34,
+  // panorama33,
+  // panorama32,
+  // panorama31,
+  // panorama23,
+  // panorama30,
+  // panorama29,
+  // panorama28,
+  // panorama27,
+  // panorama26,
+  // panorama25,
+  // panorama24,
+  // panorama22,
+  // panorama21,
+  // panorama20,
+  // panorama19,
+  // panorama18,
+  // panorama17,
+  // panorama16,
+  // panorama15,
+  // panorama14,
+  // panorama13,
+  // panorama12,
+  // panorama11,
+  // panorama10,
+  // panorama9,
+  // panorama8,
+  // panorama7,
+  // panorama6,
+  // panorama5,
+  // panorama4,
+  // panorama3,
+  // panorama2,
+  // panorama1
 );
 
 // 위치 먼저
