@@ -377,6 +377,7 @@ VR_turn(panorama43, panorama41, "./images/41.jpg", 5000.0, 397.53, -512.14);
 VR_turn(panorama44, panorama42, "./images/42.jpg", 200.72, 286.54, 5000.0);
 VR_turn(panorama41, panorama42, "./images/42.jpg", 200.72, 286.54, 5000.0);
 VR_turn(panorama42, panorama40, "./images/40.jpg", -10.31, 143.41, 5000.0);
+VR_turn(panorama45, panorama50, "./images/50.jpg", 1904.33, 279.61, -4929.39);
 
 // 수석실
 VR_turn(panorama1, panorama65, "./images/65.jpg", -3901.59, 89.63, -5000.0);
@@ -404,6 +405,7 @@ VR_turn(panorama64, panorama63, "./images/63.jpg", 5000.0, 449.57, 398.27);
 VR_turn(panorama65, panorama64, "./images/64.jpg", 5000.0, 449.57, 398.27);
 VR_turn(panorama61, panorama8, "./images/8.jpg", 5000.0, 31.58, -1067.45);
 
+// 패노라마 간의 링크를 생성
 panorama1.link(panorama2, new THREE.Vector3(-5000.0, 45.33, -428.24));
 panorama2.link(panorama3, new THREE.Vector3(-5000.0, -194.85, -597.87));
 panorama3.link(panorama4, new THREE.Vector3(-218.04, 3.7, -5000.0));
@@ -446,11 +448,12 @@ panorama42.link(panorama43, new THREE.Vector3(1735.65, -6.42, 5000.0));
 panorama43.link(panorama41, new THREE.Vector3(363.99, -37.48, 5000.0));
 panorama44.link(panorama45, new THREE.Vector3(5000.0, 162.96, 92.59));
 panorama45.link(panorama46, new THREE.Vector3(5000.0, 154.8, 22.93));
-panorama46.link(panorama47, new THREE.Vector3(5000.0, -182.81, -280.65));
+panorama45.link(panorama50, new THREE.Vector3(-608.42, 210.95, -5000.0));
+panorama46.link(panorama47, new THREE.Vector3(5000.0, -92.6, -1563.23));
 panorama47.link(panorama48, new THREE.Vector3(5000.0, 468.68, -1682.51));
 panorama48.link(panorama49, new THREE.Vector3(5000.0, -266.85, -190.33));
 panorama49.link(panorama50, new THREE.Vector3(5000.0, -16.44, -576.13));
-panorama50.link(panorama41, new THREE.Vector3(5000.0, -29.45, 295.07));
+panorama50.link(panorama45, new THREE.Vector3(5000.0, -29.45, 295.07));
 panorama51.link(panorama52, new THREE.Vector3(5000.0, -36.09, -278.91));
 panorama52.link(panorama53, new THREE.Vector3(5000.0, -40.97, -164.55));
 panorama53.link(panorama54, new THREE.Vector3(5000.0, 29.41, 1294.16));
