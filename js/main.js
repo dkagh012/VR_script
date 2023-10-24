@@ -110,15 +110,15 @@ OneItem.addEventListener("click", function () {
 });
 TwoItem.addEventListener("click", function () {
   // OneItem을 클릭했을 때 panorama2로 이동
-  viewer.setPanorama(panorama7);
+  viewer.setPanorama(panorama11);
 });
 ThreeItem.addEventListener("click", function () {
-  // OneItem을 클릭했을 때 panorama2로 이동
-  viewer.setPanorama(panorama_Three);
+  VR_Screen(panorama23, 5000.0, -82.65, 5.02);
+  viewer.setPanorama(panorama23);
 });
 FourItem.addEventListener("click", function () {
   // OneItem을 클릭했을 때 panorama2로 이동
-  viewer.setPanorama(panorama_Four);
+  viewer.setPanorama(panorama52);
 });
 
 viewer = new PANOLENS.Viewer({
@@ -203,16 +203,16 @@ VR_Screen(panorama8, 5000.0, 31.58, -1067.45);
 VR_Screen(panorama9, 4642.68, 97.43, -5000.0);
 VR_Screen(panorama10, 5000.0, 105.86, 17.6);
 VR_Screen(panorama11, 5000.0, 460.48, 32.99);
-VR_Screen(panorama12, 432.18, 185.26, 5000.0);
-VR_Screen(panorama13, 432.18, 185.26, 5000.0);
-VR_Screen(panorama14, 2008.27, -48.68, 5000.0);
-VR_Screen(panorama15, 5000.0, 154.8, 22.93);
+VR_Screen(panorama12, 366.31, 125.32, 5000.0);
+VR_Screen(panorama13, 366.31, 125.32, 5000.0);
+VR_Screen(panorama14, 1890.32, -10.64, 4965.49);
+VR_Screen(panorama15, 4997.63, 77.1, 18.51);
 VR_Screen(panorama16, 5000.0, 275.83, 155.99);
 VR_Screen(panorama17, 5000.0, 149.56, -272.84);
 VR_Screen(panorama18, 5000.0, -266.85, -190.33);
 VR_Screen(panorama19, 5000.0, 132.84, 299.7);
 VR_Screen(panorama20, 5000.0, 48.78, -1075.08);
-VR_Screen(panorama21, -1816.26, -441.72, -5000.0);
+VR_Screen(panorama21, -2858.69, -483.16, -5000.0);
 VR_Screen(panorama22, -36.48, 185.13, -5000.0);
 VR_Screen(panorama23, 669.5, 500.16, -5000.0);
 VR_Screen(panorama24, -368.65, 421.37, -5000.0);
@@ -262,31 +262,70 @@ VR_Screen(panorama65, 5000.0, 274.43, 4434.38);
 
 // 턴 이벤트
 
+// 1전시관에서 밖으로
+// -5000.00, 498.36, -39.53
+VR_turn(panorama10, panorama11, "./images/11.jpg", 5000.0, 105.86, 17.6);
+VR_turn(panorama9, panorama10, "./images/10.jpg", 5000.0, 105.86, 17.6);
+VR_turn(panorama9, panorama8, "./images/8.jpg", -5000.0, 325.2, 1365.59);
+VR_turn(panorama8, panorama9, "./images/9.jpg", 4642.68, 97.43, -5000.0);
+VR_turn(panorama7, panorama8, "./images/8.jpg", 5000.0, 31.58, -1067.45);
+VR_turn(panorama6, panorama7, "./images/7.jpg", 5000.0, 713.23, 8.77);
+VR_turn(panorama8, panorama7, "./images/7.jpg", -5000.0, -17.61, 1616.94);
+VR_turn(panorama11, panorama10, "./images/10.jpg", -5000.0, 210.09, 3349.16);
+VR_turn(panorama12, panorama11, "./images/11.jpg", 216.16, 369.71, -5000.0);
+VR_turn(panorama10, panorama9, "./images/9.jpg", -5000.0, 422.98, 762.63);
+VR_turn(panorama7, panorama6, "./images/6.jpg", -5000.0, 663.0, 2317.98);
+VR_turn(panorama6, panorama5, "./images/5.jpg", -5000.0, 278.05, 4782.53);
+VR_turn(panorama5, panorama6, "./images/6.jpg", 5000.0, 275.83, 155.99);
+VR_turn(panorama5, panorama4, "./images/4.jpg", 472.98, 2.68, 5000.0);
+VR_turn(panorama4, panorama3, "./images/3.jpg", 59.42, 347.92, 5000.0);
+VR_turn(panorama3, panorama2, "./images/2.jpg", 5000.0, 372.6, 265.79);
+VR_turn(panorama4, panorama5, "./images/5.jpg", 5000.0, 226.54, 792.3);
+VR_turn(panorama3, panorama4, "./images/4.jpg", -90.99, 501.3, -5000.0);
+VR_turn(panorama2, panorama3, "./images/3.jpg", -90.99, 501.3, -5000.0);
+VR_turn(panorama1, panorama2, "./images/2.jpg", -5000.0, -21.57, -628.63);
+
 // 2전시에서 1전시
+VR_turn(panorama11, panorama12, "./images/12.jpg", 366.31, 125.32, 5000.0);
+VR_turn(panorama12, panorama13, "./images/13.jpg", 366.31, 125.32, 5000.0);
+VR_turn(panorama13, panorama14, "./images/14.jpg", 1890.32, -10.64, 4965.49);
+VR_turn(panorama14, panorama15, "./images/15.jpg", 4997.63, 77.1, 18.51);
+VR_turn(panorama15, panorama16, "./images/16.jpg", 5000.0, 275.83, 155.99);
+VR_turn(panorama16, panorama17, "./images/17.jpg", 5000.0, 149.56, -272.84);
+VR_turn(panorama17, panorama18, "./images/18.jpg", 5000.0, -266.85, -190.33);
+VR_turn(panorama17, panorama19, "./images/19.jpg", 5000.0, 132.84, 299.7);
+VR_turn(panorama19, panorama20, "./images/20.jpg", 5000.0, 48.78, -1075.08);
+VR_turn(panorama18, panorama20, "./images/20.jpg", 5000.0, 48.78, -1075.08);
+VR_turn(panorama20, panorama21, "./images/21.jpg", -2858.69, -483.16, -5000.0);
+VR_turn(panorama21, panorama22, "./images/22.jpg", -36.48, 185.13, -5000.0);
+VR_turn(panorama22, panorama23, "./images/23.jpg", 669.5, 500.16, -5000.0);
+VR_turn(panorama23, panorama24, "./images/24.jpg", -368.65, 421.37, -5000.0);
+VR_turn(panorama24, panorama25, "./images/25.jpg", -5000.0, 296.9, -838.21);
+VR_turn(panorama27, panorama28, "./images/28.jpg", -5000.0, 59.69, -1380.79);
+VR_turn(panorama28, panorama29, "./images/29.jpg", 5000.0, -20.13, -1599.67);
+
+VR_turn(panorama13, panorama12, "./images/12.jpg", -5000.0, 460.34, 128.66);
 VR_turn(panorama31, panorama23, "./images/23.jpg", -5000.0, -57.31, -1161.86);
 VR_turn(panorama23, panorama31, "./images/31.jpg", 4128.1, 333.48, -5000.0);
-VR_turn(panorama23, panorama24, "./images/24.jpg", -368.65, 421.37, -5000.0);
 VR_turn(panorama24, panorama23, "./images/23.jpg", 102.08, -425.41, 5000.0);
-VR_turn(panorama24, panorama25, "./images/25.jpg", -5000.0, 296.9, -838.21);
 VR_turn(panorama25, panorama24, "./images/24.jpg", -564.9, -536.42, 5000.0);
 VR_turn(panorama26, panorama25, "./images/25.jpg", 130.48, 347.86, 5000.0);
 VR_turn(panorama26, panorama27, "./images/27.jpg", -5000.0, 100.27, -2809.68);
 VR_turn(panorama27, panorama26, "./images/26.jpg", -4889.6, 636.43, -5000.0);
 VR_turn(panorama28, panorama27, "./images/27.jpg", 5000.0, -618.02, -329.99);
-VR_turn(panorama27, panorama28, "./images/28.jpg", -5000.0, 59.69, -1380.79);
 VR_turn(panorama29, panorama28, "./images/28.jpg", 5000.0, -191.69, -570.98);
-VR_turn(panorama28, panorama29, "./images/29.jpg", 5000.0, -20.13, -1599.67);
 VR_turn(panorama14, panorama13, "./images/13.jpg", -58.02, 71.09, -5000.0);
-VR_turn(panorama12, panorama13, "./images/13.jpg", 432.18, 185.26, 5000.0);
-VR_turn(panorama13, panorama14, "./images/14.jpg", 2008.27, -48.68, 5000.0);
 VR_turn(panorama15, panorama14, "./images/14.jpg", -58.02, 71.09, -5000.0);
-VR_turn(panorama14, panorama15, "./images/15.jpg", 5000.0, 154.8, 22.93);
 VR_turn(panorama16, panorama15, "./images/15.jpg", -5000.0, 156.73, -3970.31);
-VR_turn(panorama15, panorama16, "./images/16.jpg", 5000.0, 275.83, 155.99);
 VR_turn(panorama17, panorama16, "./images/16.jpg", -5000.0, 204.92, 824.28);
 VR_turn(panorama18, panorama17, "./images/17.jpg", -4994.32, 234.13, 844.78);
 VR_turn(panorama19, panorama17, "./images/17.jpg", -4994.32, 234.13, 844.78);
-VR_turn(panorama16, panorama17, "./images/17.jpg", 5000.0, 149.56, -272.84);
+VR_turn(panorama20, panorama19, "./images/19.jpg", -4993.12, 285.49, 1339.28);
+VR_turn(panorama20, panorama18, "./images/18.jpg", -5000.0, 484.98, -4777.22);
+VR_turn(panorama21, panorama20, "./images/20.jpg", -5000.0, 12.34, 91.67);
+VR_turn(panorama22, panorama21, "./images/21.jpg", -3951.58, 109.06, 5000.0);
+VR_turn(panorama23, panorama22, "./images/22.jpg", -710.83, 583.12, 5000.0);
+
 //수석실에서 2전시관 가는길
 VR_turn(panorama41, panorama40, "./images/40.jpg", -10.31, 143.41, 5000.0);
 VR_turn(panorama40, panorama39, "./images/39.jpg", -5000.0, 348.65, -2692.99);
@@ -363,28 +402,29 @@ VR_turn(panorama61, panorama60, "./images/60.jpg", 5000.0, 449.57, 398.27);
 VR_turn(panorama63, panorama62, "./images/62.jpg", 5000.0, 449.57, 398.27);
 VR_turn(panorama64, panorama63, "./images/63.jpg", 5000.0, 449.57, 398.27);
 VR_turn(panorama65, panorama64, "./images/64.jpg", 5000.0, 449.57, 398.27);
+VR_turn(panorama61, panorama8, "./images/8.jpg", 5000.0, 31.58, -1067.45);
 
 panorama1.link(panorama2, new THREE.Vector3(-5000.0, 45.33, -428.24));
 panorama2.link(panorama3, new THREE.Vector3(-5000.0, -194.85, -597.87));
 panorama3.link(panorama4, new THREE.Vector3(-218.04, 3.7, -5000.0));
-panorama4.link(panorama5, new THREE.Vector3(805.35, 139.93, -5000.0));
-panorama5.link(panorama6, new THREE.Vector3(5000.0, 92.27, 1519.0));
+panorama4.link(panorama5, new THREE.Vector3(-45.87, -55.84, -5000.0));
+panorama5.link(panorama6, new THREE.Vector3(5000.0, 36.15, 758.13));
 panorama6.link(panorama7, new THREE.Vector3(5000.0, 25.61, 671.68));
 panorama7.link(panorama8, new THREE.Vector3(5000.0, 149.56, -272.84));
 panorama8.link(panorama9, new THREE.Vector3(5000.0, 197.1, -1362.43));
 panorama9.link(panorama10, new THREE.Vector3(5000.0, 129.11, -4800.41));
 panorama10.link(panorama11, new THREE.Vector3(5000.0, 105.86, 17.6));
-panorama11.link(panorama12, new THREE.Vector3(5000.0, -612.71, -54.24));
+panorama11.link(panorama12, new THREE.Vector3(5000.0, 372.57, -66.9));
 panorama12.link(panorama13, new THREE.Vector3(363.99, -37.48, 5000.0));
 panorama13.link(panorama14, new THREE.Vector3(363.99, -37.48, 5000.0));
 panorama14.link(panorama15, new THREE.Vector3(1793.92, -38.0, 5000.0));
 panorama15.link(panorama16, new THREE.Vector3(5000.0, 154.8, 22.93));
 panorama16.link(panorama17, new THREE.Vector3(5000.0, -164.41, 83.03));
-panorama17.link(panorama18, new THREE.Vector3(5000.0, -271.15, 2303.48));
-panorama18.link(panorama19, new THREE.Vector3(5000.0, -266.85, -190.33));
+panorama17.link(panorama18, new THREE.Vector3(5000.0, -323.37, 2303.48));
+panorama18.link(panorama20, new THREE.Vector3(5000.0, -266.85, -190.33));
 panorama19.link(panorama20, new THREE.Vector3(5000.0, -273.47, 1517.24));
-panorama20.link(panorama21, new THREE.Vector3(5000.0, -29.45, 295.07));
-panorama21.link(panorama22, new THREE.Vector3(-1835.3, -552.33, -5000.0));
+panorama20.link(panorama21, new THREE.Vector3(5000.0, -4.35, -1074.9));
+panorama21.link(panorama22, new THREE.Vector3(-2781.49, -494.83, -5000.0));
 panorama22.link(panorama23, new THREE.Vector3(-36.48, 185.13, -5000.0));
 panorama23.link(panorama24, new THREE.Vector3(1136.13, 366.26, -5000.0));
 panorama24.link(panorama25, new THREE.Vector3(-368.65, 421.37, -5000.0));
@@ -421,8 +461,8 @@ panorama57.link(panorama58, new THREE.Vector3(5000.0, -271.15, 2303.48));
 panorama58.link(panorama59, new THREE.Vector3(-12.14, 129.45, 5000.0));
 panorama59.link(panorama60, new THREE.Vector3(5000.0, -273.47, 1517.24));
 panorama60.link(panorama61, new THREE.Vector3(5000.0, 22.22, -3046.47));
-panorama61.link(panorama62, new THREE.Vector3(5000.0, 224.25, 336.58));
-panorama62.link(panorama63, new THREE.Vector3(-5000.0, 74.24, 2350.49));
+panorama61.link(panorama8, new THREE.Vector3(5000.0, 224.25, 336.58));
+panorama62.link(panorama63, new THREE.Vector3(-5000.0, -120.96, 3202.25));
 panorama63.link(panorama64, new THREE.Vector3(-5000.0, 168.39, 3181.32));
 panorama64.link(panorama65, new THREE.Vector3(-5000.0, -97.96, 1272.01));
 panorama65.link(panorama1, new THREE.Vector3(5000.0, 274.43, 4434.38));
@@ -447,7 +487,7 @@ panorama59.link(panorama53, new THREE.Vector3(563.94, 42.45, 5000.0));
 panorama59.link(panorama58, new THREE.Vector3(119.49, -99.74, -5000.0));
 panorama60.link(panorama55, new THREE.Vector3(5000.0, 50.19, -81.6));
 panorama61.link(panorama60, new THREE.Vector3(-5000.0, -21.74, -263.76));
-panorama62.link(panorama5, new THREE.Vector3(5000.0, 392.5, 299.85));
+panorama62.link(panorama5, new THREE.Vector3(5000.0, 140.96, 209.95));
 panorama63.link(panorama62, new THREE.Vector3(5000.0, 392.5, 299.85));
 panorama64.link(panorama63, new THREE.Vector3(5000.0, 392.5, 299.85));
 panorama65.link(panorama64, new THREE.Vector3(-4131.89, 307.45, -5000.0));
@@ -514,26 +554,44 @@ panorama17.link(panorama26, new THREE.Vector3(304.69, 103.24, -5000.0));
 panorama17.link(panorama19, new THREE.Vector3(5000.0, -323.37, -290.93));
 panorama18.link(panorama17, new THREE.Vector3(-5000.0, 158.26, -4072.68));
 panorama19.link(panorama17, new THREE.Vector3(-5000.0, 224.49, 1325.45));
+panorama20.link(panorama18, new THREE.Vector3(-5000.0, 154.29, 2798.82));
+panorama20.link(panorama19, new THREE.Vector3(-5000.0, 182.21, -1259.55));
+panorama21.link(panorama20, new THREE.Vector3(-4742.08, 18.52, 5000.0));
+panorama22.link(panorama21, new THREE.Vector3(-710.83, 583.12, 5000.0));
+panorama23.link(panorama22, new THREE.Vector3(-5000.0, -69.73, 1480.82));
+panorama29.link(panorama21, new THREE.Vector3(-2863.34, -556.17, 5000.0));
+panorama21.link(panorama29, new THREE.Vector3(4505.73, 328.49, 5000.0));
+
+// 1전시관에서 밖으로
+panorama12.link(panorama11, new THREE.Vector3(-5000.0, 237.35, 16.4));
+panorama11.link(panorama10, new THREE.Vector3(215.36, 244.08, -5000.0));
+panorama10.link(panorama9, new THREE.Vector3(-5000.0, 17.95, 1346.34));
+panorama9.link(panorama8, new THREE.Vector3(-5000.0, 106.8, 977.4));
+panorama8.link(panorama7, new THREE.Vector3(-5000.0, 4.16, 1515.31));
+panorama7.link(panorama6, new THREE.Vector3(-5000.0, 4.16, 1515.31));
+panorama6.link(panorama5, new THREE.Vector3(-5000.0, 140.63, 2152.57));
+panorama5.link(panorama4, new THREE.Vector3(-600.29, 88.86, 5000.0));
+panorama5.link(panorama62, new THREE.Vector3(-5000.0, -3.18, 1101.36));
+panorama4.link(panorama3, new THREE.Vector3(472.98, 2.68, 5000.0));
+panorama3.link(panorama2, new THREE.Vector3(182.53, 36.42, 5000.0));
+panorama2.link(panorama1, new THREE.Vector3(5000.0, 423.13, 620.36));
 
 viewer.add(
-  // panorama_Two,
-  // panorama_Three,
-  // panorama_Four,
-  // panorama1,
-  // panorama2,
-  // panorama3,
-  // panorama4,
-  // panorama5,
-  // panorama6,
-  // panorama7,
-  // panorama8,
-  // panorama9,
-  // panorama10,
-  // panorama11,
-  // panorama12,
-  // panorama13,
-  // panorama14,
-  // panorama15,
+  panorama1,
+  panorama2,
+  panorama3,
+  panorama4,
+  panorama5,
+  panorama6,
+  panorama7,
+  panorama8,
+  panorama9,
+  panorama10,
+  panorama11,
+  panorama12,
+  panorama13,
+  panorama14,
+  panorama15,
   panorama16,
   panorama17,
   panorama18,
@@ -548,108 +606,42 @@ viewer.add(
   panorama27,
   panorama28,
   panorama29,
-  panorama30
-  // panorama31,
-  // panorama32,
-  // panorama33,
-  // panorama34,
-  // panorama35,
-  // panorama36,
-  // panorama37,
-  // panorama38,
-  // panorama39,
-  // panorama40,
-  // panorama41,
-  // panorama42,
-  // panorama43,
-  // panorama44,
-  // panorama45,
-  // panorama46,
-  // panorama47,
-  // panorama48,
-  // panorama49,
-  // panorama50,
-  // panorama51,
-  // panorama52,
-  // panorama53,
-  // panorama54,
-  // panorama55,
-  // panorama56,
-  // panorama57,
-  // panorama58,
-  // panorama59,
-  // panorama60,
-  // panorama61,
-  // panorama62,
-  // panorama63
-  // panorama64,
-  // panorama65
-  // -----------------------------------------------------------------------------------------------
-  // panorama65,
-  // panorama64,
-  // panorama63,
-  // panorama62,
-  // panorama61,
-  // panorama60,
-  // panorama59,
-  // panorama58,
-  // panorama57,
-  // panorama56,
-  // panorama55,
-  // panorama54,
-  // panorama53,
-  // panorama52,
-  // panorama51,
-  // panorama50,
-  // panorama49,
-  // panorama48,
-  // panorama47,
-  // panorama46,
-  // panorama45,
-  // panorama44,
-  // panorama43,
-  // panorama42,
-  // panorama41,
-  // panorama40,
-  // panorama39,
-  // panorama38,
-  // panorama37,
-  // panorama36,
-  // panorama35,
-  // panorama34,
-  // panorama33,
-  // panorama32,
-  // panorama31,
-  // panorama23,
-  // panorama30,
-  // panorama29,
-  // panorama28,
-  // panorama27,
-  // panorama26,
-  // panorama25,
-  // panorama24,
-  // panorama22,
-  // panorama21,
-  // panorama20,
-  // panorama19,
-  // panorama18,
-  // panorama17,
-  // panorama16,
-  // panorama15,
-  // panorama14,
-  // panorama13,
-  // panorama12,
-  // panorama11,
-  // panorama10,
-  // panorama9,
-  // panorama8,
-  // panorama7,
-  // panorama6,
-  // panorama5,
-  // panorama4,
-  // panorama3,
-  // panorama2,
-  // panorama1
+  panorama30,
+  panorama31,
+  panorama32,
+  panorama33,
+  panorama34,
+  panorama35,
+  panorama36,
+  panorama37,
+  panorama38,
+  panorama39,
+  panorama40,
+  panorama41,
+  panorama42,
+  panorama43,
+  panorama44,
+  panorama45,
+  panorama46,
+  panorama47,
+  panorama48,
+  panorama49,
+  panorama50,
+  panorama51,
+  panorama52,
+  panorama53,
+  panorama54,
+  panorama55,
+  panorama56,
+  panorama57,
+  panorama58,
+  panorama59,
+  panorama60,
+  panorama61,
+  panorama62,
+  panorama63,
+  panorama64,
+  panorama65
 );
 
 // 위치 먼저
