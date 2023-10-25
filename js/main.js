@@ -369,6 +369,7 @@ VR_turn(panorama42, panorama44, "./images/44.jpg", 5000.0, 162.96, 92.59);
 VR_turn(panorama44, panorama41, "./images/41.jpg", -5000.0, 269.83, 180.8);
 VR_turn(panorama53, panorama52, "./images/52.jpg", -5000.0, 373.6, -982.66);
 VR_turn(panorama52, panorama51, "./images/51.jpg", -5000.0, 192.54, 292.0);
+VR_turn(panorama51, panorama52, "./images/52.jpg",  5000.0, 502.7, -425.98);
 VR_turn(panorama41, panorama51, "./images/51.jpg", 5000.0, 313.25, -337.33);
 VR_turn(panorama41, panorama43, "./images/43.jpg", -5000.0, 331.08, -857.4);
 VR_turn(panorama42, panorama43, "./images/43.jpg", 2049.07, -96.58, 5000.0);

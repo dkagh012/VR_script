@@ -20,7 +20,7 @@ body {
   box-sizing: border-box;
   overflow-y: auto;
   background-color: #fff;
-  transition: left 0.3s;
+  transition: left 0.8s;
 }
 
 .container .OpenMenu {
@@ -39,24 +39,34 @@ body {
   left: 0;
   top: 0;
   border: 0;
-  width: 90px;
-  height: 90px;
+  width: 64px;
+  height: 64px;
   transition: all 0.4s ease;
   background: black;
   z-index: 110;
 }
 .open * {
   color: white;
-  font-size: 46px;
+  font-size: 30px;
 }
-.SideMenu .SideMenuList {
-  padding-top: 90px;
+.SideMenu .SideMenuTitle {
+  height: 64px;
+  text-align: right;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  font-weight: 400;
+  font-size: 23px;
+  color: #ffffff;
+  line-height: 64px;
+  padding-right: 30px;
+  background: linear-gradient(146.69deg, rgba(0, 151, 88, 0.95) 7.53%, rgba(0, 126, 181, 0.95) 94.15%);
 }
 .ChangeBtn {
-  background: white;
+  background: transparent;
 }
 .ChangeBtn * {
-  color: black;
+  color: white;
 }
 .SideMenu .SideMenuList .MenuItem button:hover {
   background: #00876c;
@@ -92,4 +102,9 @@ body {
   font-size: 19px;
   color: black;
   border-radius: 5px;
+}
+@media screen and (max-width: 425px){
+  .container .left{
+    width: 240px;
+  }
 }
